@@ -172,7 +172,7 @@ function plotPopulation(country, toolChart) {
         .attr("stroke", "steelblue")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-                    .x(function(d) { return mapFunctions.xScale(d.year) })
+                    .x(function(d) { return mapFunctions.xScale(d.year) + 25})
                     .y(function(d) { return mapFunctions.yScale(d.population) }))
     makeLabels2(toolChart, small_msm, "Population Over Time For " + country, "Year", "Population");
 }
@@ -250,7 +250,7 @@ function drawAxes2(limits, x, y, svgContainer, msm) {
     // plot x-axis at bottom of SVG
     let xAxis = d3.axisBottom().scale(xScale);
     svgContainer.append("g")
-        .attr('transform', 'translate(0, ' + (msm.height - msm.marginAll) + ')')
+        .attr('transform', 'translate(25, ' + (msm.height - msm.marginAll) + ')')
         .call(xAxis);
 
     // return y value from a row of data
