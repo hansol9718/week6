@@ -230,6 +230,7 @@ function drawAxes(limits, x, y, svgContainer, msm) {
     };
 }
 
+//axes for plot inside tooltip
 function drawAxes2(limits, x, y, svgContainer, msm) {
     // return x value from a row of data
     let xValue = function (d) {
